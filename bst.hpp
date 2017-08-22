@@ -14,7 +14,7 @@ class BSTNode {
 	private:
 		BSTNode<dataType> * left;
 		BSTNode<dataType> * right;
-		dataType value;
+		dataType * value;
 };
 
 
@@ -36,7 +36,7 @@ dataType BSTNode<dataType>::getLeft() {
 
 template<class dataType>
 dataType BSTNode<dataType>::getValue() {
-	return value;
+	return *value;
 }
 
 template<class dataType>
@@ -53,5 +53,5 @@ template<class dataType>
 void BSTNode<dataType>::setValue(dataType val) {
 	dataType * v1 = new dataType;
 	*v1 = val;
-	value = *v1;
+	value = v1;
 }
